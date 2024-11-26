@@ -1,77 +1,32 @@
-import './App.css';
-import React, { useState } from 'react';
-import Axios from "axios";
-import InputMask from 'react-input-mask';
-import ListaClientes from "./components/listar_clientes/listar.js";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import CadastroAgendamentos from "./components/agendamento/cadastro_agendamento";
+import CadastroCliente from "./components/cliente/cadastro_cliente"; 
 
-// Defina o componente Cadastro Cliente.
-function CadastroCliente() {
-  // Defina os estados iniciais para 'values', 'nome' e 'telefone'.
-  const [values, setValues] = useState({ nome: '', telefone: '' });
-  const [nome, setNome] = useState('');
-  const [telefone, setTelefone] = useState('');
-
-  // Exiba no console os valores do estado 'values'.
-  console.log(values);
-
-  // Função para manipular a mudança nos campos de entrada e atualizar o estado 'values'.
-  const handleChangeValues = (value) => {
-    // Use a função de atualização do estado para garantir que os valores antigos sejam preservados.
-    setValues(prevValue => ({
-      ...prevValue, // Mantém os valores antigos do objeto.
-      [value.target.name]: value.target.value, // Atualiza o campo correspondente com o novo valor.
-    }))
-  };
-
-  // Função para lidar com o clique no botão de cadastro.
-  const handleClickButton = () => {
-    // Faça uma solicitação POST para a URL especificada com os dados do aluno.
-    Axios.post("http://localhost:3001/register", {
-      nome: values.nome,
-      telefone: values.telefone
-    }).then((response) => {
-      console.log(response); // Exiba a resposta da solicitação no console.
-    })
-  }
-
-  // Renderize o formulário de cadastro de cliente.
+function App() {
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <h2>Cadastro de Clientes</h2>
-          <form onSubmit={handleClickButton}>
-            <div className="form-group">
-              <label htmlFor="nome">Nome:</label>
-              <input
-                type="text"
-                className="form-control"
-                id="nome"
-                name='nome'
-                onChange={handleChangeValues}
-              />
-            </div>
-            <div className="form-group">
-          <label htmlFor="telefone">Telefone:</label>
-          <InputMask
-            mask="(99) 99999-9999"
-            className="form-control"
-            id="telefone"
-            name="telefone"
-            onChange={handleChangeValues}
-              />
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Cadastrar
-            </button>
-          </form>
+    <Router>
+      <div className="container mt-3">
+        <h1>Bem-vindo ao Sistema de Agendamento</h1>
+
+        {/* Links de navegação */}
+        <div>
+          <Link to="/agendamentos" className="btn btn-link">
+            Agendamentos
+          </Link>
+          <Link to="/clientes" className="btn btn-link ml-3">
+            Clientes
+          </Link>
         </div>
+
+        {/* Definição das rotas */}
+        <Routes>
+          <Route path="/agendamentos" element={<CadastroAgendamentos />} />
+          <Route path="/clientes" element={<CadastroCliente />} />
+        </Routes>
       </div>
-      {/* Renderize o componente ListaClientes para exibir a lista de clientes cadastrados. */}
-      <ListaClientes/>
-    </div>
+    </Router>
   );
 }
 
-// Exporte o componente CadastroAluno para uso em outros lugares.
-export default CadastroCliente;
+export default App;

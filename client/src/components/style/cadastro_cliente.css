@@ -1,0 +1,62 @@
+/* Estilo para o container principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para o título da página */
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Estilo para o formulário */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para os campos de entrada */
+  input[type="text"],
+  input[type="tel"] {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  input[type="text"]:focus,
+  input[type="tel"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Estilo para o botão de cadastro */
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Estilo para os botões em tamanho pequeno */
+  button.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+  

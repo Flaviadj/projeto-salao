@@ -1,0 +1,50 @@
+/* Estilo para visualização */
+.info-view, .info-edit {
+  display: flex;
+  flex-direction: column; /* Deixa os elementos empilhados */
+  gap: 5px; /* Espaçamento entre os itens */
+}
+
+.info-view p {
+  margin: 0; /* Remove margens padrão dos parágrafos */
+}
+
+/* Ações alinhadas à direita */
+.actions {
+  display: flex;
+  justify-content: flex-start; /* Alternativa: flex-end para alinhar à direita */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Botões */
+button {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+input[type="datetime-local"],
+input[type="time"] {
+  padding: 5px;
+  font-size: 1rem;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
