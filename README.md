@@ -1,3 +1,89 @@
+### Instalação do Ambiente de Desenvolvimento (Windows 10)
+Para o seu projeto "projeto-salao", você precisará de:
+
+Node.js e npm: Para rodar seu servidor backend (Express) e o frontend (React). O npm (Node Package Manager) vem junto com o Node.js.
+XAMPP: Um pacote que inclui o servidor Apache, o banco de dados MySQL (ou MariaDB, que é compatível e está na sua configuração) e o PHP (que não será usado diretamente no seu projeto, mas é útil para o phpMyAdmin).
+Passo 1: Instalar o XAMPP (Apache, MySQL/MariaDB)
+O XAMPP é a forma mais fácil de ter um servidor web e banco de dados rodando na sua máquina localmente.
+
+## Baixe o XAMPP:
+
+Abra seu navegador e vá para o site oficial do XAMPP: https://www.apachefriends.org/download.html
+Baixe a versão para Windows com a versão mais recente do PHP. Escolha a opção de download com "PHP 8.x.x".
+Execute o Instalador do XAMPP:
+
+Após o download, execute o arquivo .exe que você baixou.
+Importante: Durante a instalação, pode aparecer um aviso sobre o UAC (User Account Control). Basta clicar em "OK" para prosseguir.
+Siga as etapas do instalador. Quando ele perguntar quais componentes instalar, certifique-se de que Apache e MySQL estão selecionados. Os outros são opcionais para o seu projeto, mas pode deixá-los marcados se quiser.
+Escolha a pasta de instalação. O padrão é C:\xampp. Pode deixar assim ou escolher outra, mas lembre-se onde instalou.
+Conclua a instalação.
+Inicie o XAMPP Control Panel:
+
+Ao final da instalação, o instalador perguntará se você deseja iniciar o Painel de Controle do XAMPP. Marque essa opção e clique em "Finish".
+Se não iniciar, procure por "XAMPP Control Panel" no menu Iniciar do Windows e execute-o.
+Inicie o Apache e o MySQL:
+
+No XAMPP Control Panel, você verá uma lista de módulos.
+
+Clique no botão "Start" ao lado de "Apache".
+Clique no botão "Start" ao lado de "MySQL".
+
+Se tudo correr bem, os módulos ficarão verdes e você verá os PIDs e Portas associados. Se houver algum problema, pode ser conflito de portas (geralmente com o MySQL). Me avise se acontecer, mas o padrão é a porta 3306 para o MySQL, que é a que seu backend está configurado.
+Passo 2: Configurar o Banco de Dados (MySQL/MariaDB)
+Agora que o MySQL está rodando, vamos importar o banco de dados do seu projeto.
+
+## Acesse o phpMyAdmin:
+No XAMPP Control Panel, ao lado do módulo MySQL, clique no botão "Admin". Isso abrirá o phpMyAdmin no seu navegador (http://localhost/phpmyadmin/).
+Crie o Banco de Dados:
+No phpMyAdmin, no menu à esquerda, clique em "New" (ou "Novo").
+No campo "Database name" (Nome do banco de dados), digite exatamente: projetosalao
+Clique em "Create" (ou "Criar").
+Importe o Script SQL:
+Com o banco de dados projetosalao selecionado no menu à esquerda, clique na aba "Import" (Importar) na parte superior.
+Clique no botão "Choose File" (Escolher arquivo) e navegue até a pasta do seu projeto: flaviadj/projeto-salao/projeto-salao-63460918d4bc3add233e411feacf75920bde426c/bd/
+Selecione o arquivo projetosalao.sql.
+Role a página até o final e clique no botão "Go" (Executar/Ir).
+Você deverá ver uma mensagem de sucesso, e as tabelas (agendamentos, categorias, clientes, procedimentos) aparecerão no menu à esquerda, dentro do banco projetosalao.
+
+### Passo 3: Instalar o Node.js e npm
+
+Baixe o Node.js:
+
+Vá para o site oficial do Node.js: https://nodejs.org/en/download/
+Baixe o instalador para Windows (recomendado a versão LTS - Long Term Support, que é a mais estável). Escolha "Windows Installer (.msi)".
+Execute o Instalador do Node.js:
+
+Siga as instruções do instalador. Geralmente, você pode aceitar as opções padrão ("Next", "I accept the terms", "Next" até "Install").
+Ele instalará o Node.js e o npm automaticamente.
+Verifique a Instalação:
+
+Abra o Prompt de Comando (cmd) ou PowerShell no Windows.
+Digite os seguintes comandos e pressione Enter após cada um:
+
+node -v
+npm -v
+
+Você deverá ver os números das versões instaladas (ex: v18.17.0 para Node.js e 9.6.7 para npm). Isso confirma que a instalação foi bem-sucedida.
+
+## Passo 4: Configurar e Iniciar o Backend (Servidor Node.js)
+Abra o Prompt de Comando/PowerShell:
+
+É importante que você abra uma nova janela do Prompt de Comando ou PowerShell após instalar o Node.js, para que as variáveis de ambiente sejam atualizadas.
+Navegue até a pasta do servidor:
+
+Use o comando cd (change directory) para ir até a pasta onde está o código do seu backend.
+No seu caso, o caminho completo é: FULANO/projeto-salao/projeto-salao-/server.
+Você pode copiar o caminho da barra de endereços do explorador de arquivos e usar:
+
+cd C:\caminho\completo\para\sua\pasta\projeto-salao-\server
+
+(Substitua C:\caminho\completo\para\sua\pasta pelo caminho real no seu computador).
+
+
+# Instale as dependências do backend:
+
+npm install
+
 # Começando com o Create React App
 
 Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
@@ -5,6 +91,13 @@ Este projeto foi inicializado com [Create React App](https://github.com/facebook
 ## Scripts Disponíveis
 
 No diretório do projeto, você pode executar:
+
+Isso baixará as bibliotecas express, mysql2, cors e nodemon para o seu servidor.
+
+Inicie o servidor backend:
+
+npm start
+
 
 ### `npm start`
 
