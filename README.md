@@ -44,6 +44,8 @@ Clique no botão "Choose File" (Escolher arquivo) e navegue até a pasta do seu 
 
 fulano/projeto-salao/projeto-salao-/bd/
 
+# projeto-salao/blob/main/bd/projetosalao.sql
+
 Selecione o arquivo projetosalao.sql.
 
 Role a página até o final e clique no botão "Go" (Executar/Ir).
