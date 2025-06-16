@@ -52,7 +52,7 @@ Role a página até o final e clique no botão "Go" (Executar/Ir).
 
 Você deverá ver uma mensagem de sucesso, e as tabelas (agendamentos, categorias, clientes, procedimentos) aparecerão no menu à esquerda, dentro do banco projetosalao.
 
-### Passo 3: Instalar o Node.js e npm
+# : Instalar o Node.js e npm
 
 Baixe o Node.js:
 
@@ -73,7 +73,7 @@ npm -v
 
 Você deverá ver os números das versões instaladas (ex: v18.17.0 para Node.js e 9.6.7 para npm). Isso confirma que a instalação foi bem-sucedida.
 
-## Passo 4: Configurar e Iniciar o Backend (Servidor Node.js)
+# : Configurar e Iniciar o Backend (Servidor Node.js)
 Abra o Prompt de Comando/PowerShell:
 
 É importante que você abra uma nova janela do Prompt de Comando ou PowerShell após instalar o Node.js, para que as variáveis de ambiente sejam atualizadas.
