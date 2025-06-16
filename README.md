@@ -40,9 +40,14 @@ No campo "Database name" (Nome do banco de dados), digite exatamente: projetosal
 Clique em "Create" (ou "Criar").
 Importe o Script SQL:
 Com o banco de dados projetosalao selecionado no menu à esquerda, clique na aba "Import" (Importar) na parte superior.
-Clique no botão "Choose File" (Escolher arquivo) e navegue até a pasta do seu projeto: flaviadj/projeto-salao/projeto-salao-63460918d4bc3add233e411feacf75920bde426c/bd/
+Clique no botão "Choose File" (Escolher arquivo) e navegue até a pasta do seu projeto: 
+
+fulano/projeto-salao/projeto-salao-/bd/
+
 Selecione o arquivo projetosalao.sql.
+
 Role a página até o final e clique no botão "Go" (Executar/Ir).
+
 Você deverá ver uma mensagem de sucesso, e as tabelas (agendamentos, categorias, clientes, procedimentos) aparecerão no menu à esquerda, dentro do banco projetosalao.
 
 ### Passo 3: Instalar o Node.js e npm
