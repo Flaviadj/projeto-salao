@@ -61,6 +61,7 @@ Abra o Prompt de Comando (cmd) ou PowerShell no Windows.
 Digite os seguintes comandos e pressione Enter após cada um:
 
 node -v
+
 npm -v
 
 Você deverá ver os números das versões instaladas (ex: v18.17.0 para Node.js e 9.6.7 para npm). Isso confirma que a instalação foi bem-sucedida.
