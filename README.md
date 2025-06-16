@@ -42,7 +42,7 @@ Importe o Script SQL:
 Com o banco de dados projetosalao selecionado no menu à esquerda, clique na aba "Import" (Importar) na parte superior.
 Clique no botão "Choose File" (Escolher arquivo) e navegue até a pasta do seu projeto: 
 
-fulano/projeto-salao/projeto-salao-/bd/
+`fulano/projeto-salao/projeto-salao-/bd/`
 
 # projeto-salao/blob/main/bd/projetosalao.sql
 
@@ -67,9 +67,9 @@ Verifique a Instalação:
 Abra o Prompt de Comando (cmd) ou PowerShell no Windows.
 Digite os seguintes comandos e pressione Enter após cada um:
 
-node -v
+`node -v`
 
-npm -v
+`npm -v`
 
 Você deverá ver os números das versões instaladas (ex: v18.17.0 para Node.js e 9.6.7 para npm). Isso confirma que a instalação foi bem-sucedida.
 
@@ -83,14 +83,14 @@ Use o comando cd (change directory) para ir até a pasta onde está o código do
 No seu caso, o caminho completo é: FULANO/projeto-salao/projeto-salao-/server.
 Você pode copiar o caminho da barra de endereços do explorador de arquivos e usar:
 
-cd C:\caminho\completo\para\sua\pasta\projeto-salao-\server
+cd `C:\caminho\completo\para\sua\pasta\projeto-salao-\server`
 
 (Substitua C:\caminho\completo\para\sua\pasta pelo caminho real no seu computador).
 
 
 # Instale as dependências do backend:
 
-npm install
+`npm install`
 
 # Começando com o Create React App
 
@@ -104,7 +104,7 @@ Isso baixará as bibliotecas express, mysql2, cors e nodemon para o seu servidor
 
 Inicie o servidor backend:
 
-npm start
+`npm start`
 
 
 ### `npm start`
